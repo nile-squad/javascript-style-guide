@@ -1,4 +1,6 @@
-# JavaScript / TypeScript Enhanced Quick Style Guide
+# JavaScript / TypeScript Style Guide 
+
+> => roughly 9974 tokens, 39898 characters and 6197 words - summarizing contributions are welcome!
 
 **Version:** 1.0  
 **Date:** August 14, 2025  
