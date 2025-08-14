@@ -24,7 +24,7 @@ These aren't suggestions - they're the foundation of everything we build. Think 
 
 - **No Classes:** Classes hide state and create `this` confusion. Functions are predictable - same input, same output. They compose naturally and test easily.
 - **ES6+:** Modern syntax prevents entire categories of bugs. `const` prevents accidental reassignment, destructuring makes data flow obvious, arrow functions eliminate `this` surprises.
-- **File Size Limits:** Your brain can only hold so much context. After 400 lines, you're not reading code anymore - you're getting lost in it.
+- **Lines Of Code Limits:** Your brain can only hold so much context. After 400 lines, you're not reading code anymore - you're getting lost in it.
 - **Task Documentation:** Writing down your plan before coding prevents scope creep and creates an audit trail. Future you will thank present you.
 
 ## 2. Core Programming Principles
@@ -105,6 +105,8 @@ const processUser = async (userData, { database, emailService }) => {
 };
 ```
 
+> Caution: Sometimes it makes sense for a function or module to be long and verbose, especially if pieces are too intricate and logic is not reasonable when fragmented, in such cases it's fine to do more than a thing, or usually day to day 2 to 3 things won't hurt.
+
 ### 2.2 Dependency Injection
 
 Depend on abstractions (injected functions) not concrete implementations. This is the secret sauce that makes your code testable and flexible.
@@ -171,6 +173,8 @@ const testUserService = createUserService({
 - Allows swapping implementations without code changes
 - Functions become pure and predictable
 - Eliminates hidden imports buried in functions
+
+> Caution: for things like loggers, and singleton instances you may actually just want to import and just use freely, don't do DI for utilities and cases it doesn't work well, consitency of approach is more preferred sometimes than being complaint.
 
 ### 2.3 Open/Closed Principle  
 
